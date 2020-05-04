@@ -1,0 +1,2 @@
+rootProject.name='AsecingOrderApplication'
+include ':app'
