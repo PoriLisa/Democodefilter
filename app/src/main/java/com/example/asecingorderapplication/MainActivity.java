@@ -180,13 +180,19 @@ public class MainActivity extends AppCompatActivity implements BottomSheetFragme
     @Override
     public void asecndingOrder() {
         Collections.sort(employeeArrayList, new SortByEmployeeName());
-        employeeAdapter.setData(employeeArrayList);
+        //employeeAdapter.setData(employeeArrayList);
+        employeeAdapter = new EmployeeAdapter(this, employeeArrayList);
+        mRvEmployeelist.setAdapter(employeeAdapter);
+        et_search.setText("");
     }
 
     @Override
     public void desecndingOrder() {
         Comparator comparator = Collections.reverseOrder(new SortByEmployeeName());
         Collections.sort(employeeArrayList, comparator);
-        employeeAdapter.setData(employeeArrayList);
+        //employeeAdapter.setData(employeeArrayList);
+        employeeAdapter = new EmployeeAdapter(this, employeeArrayList);
+        mRvEmployeelist.setAdapter(employeeAdapter);
+        et_search.setText("");
     }
 }

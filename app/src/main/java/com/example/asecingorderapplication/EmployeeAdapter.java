@@ -52,8 +52,6 @@ public class EmployeeAdapter extends RecyclerView.Adapter<EmployeeAdapter.Employ
 
     public void setData(ArrayList<Employee> employees){
 
-        Log.d(TAG, "setData: "+employees.toString());
-
         employeeArrayList = new ArrayList<>();
         employeeArrayList.addAll(employees);
         notifyDataSetChanged();
